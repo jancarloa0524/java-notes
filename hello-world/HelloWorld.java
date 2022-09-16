@@ -3,8 +3,12 @@ public class HelloWorld {
     System.out.println("Hello World!");
 
     System.out.print("Goobye");
+    System.out.println(" World!");
+    // This will force the next line of text to be on the next line. 
 
-    System.out.print(" World!");
+    System.out.print("New");
+    // Because the output before the following one isn't a "println", the following output is printed on the same line.
+    System.out.print("Line");
   }
 }
 
