@@ -1,4 +1,5 @@
 // Classes define STATE and BEHAVIOUR of their instances. 
+// Objects are instances of classes!
 public class Game {
     // The following are called "Instance Variables"
     String gameTitle;
@@ -30,7 +31,7 @@ public class Game {
     }
 
     public static void main(String[] args){
-        // These are instances of the class "Game". !!! AP EXAM NOTE !!! Within these instances are "actual parameters"
+        // These are instances of the class "Game". !!! AP EXAM NOTE !!! Within these instances are "actual parameters". Also known as "objects".
         Game halo = new Game("Halo", 20, 9.2);
         Game halfLife = new Game("Half-Life", 10, 9.9);
         Game callOfDuty = new Game("Call of Duty", 60, true);
