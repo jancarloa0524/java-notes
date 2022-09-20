@@ -9,10 +9,10 @@
     - Variables.java
         - Introduces variable types.
     - Escape Sequences.java
-        - Introduces ways to include certain 
+        - Introduces ways to include certain sybmols
     - MyProfile.java
 4. Manipulating Variables
-    - 
+    - Using operators to update variables
 5. Classes and Objects
     - 
 6. Methods

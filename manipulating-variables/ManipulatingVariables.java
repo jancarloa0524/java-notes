@@ -5,6 +5,7 @@ public class ManipulatingVariables {
         int subtract = 4 - 2;
         int multiplication = 2 * 2;
         int division = 4 / 2;
+        // if the first number is smaller than the second number, program will still run. For example, 5 % 9 outputs 5, because the remainder of trying to do this division would be 5. 
         int modulo = 9 % 5;
 
         System.out.println("The following is done with operators");
@@ -71,5 +72,9 @@ public class ManipulatingVariables {
         System.out.println(x4/y4);
 
         // You cannot convert a double to an int, however. 
+
+        /* 
+        Normally, if you divide by 0 or modulo by 0, you of course get an erorr. However, if the user instead inputs 0, than there will be a runtime error, ArithmeticException. 
+        */
     }
 }
