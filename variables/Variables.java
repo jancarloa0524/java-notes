@@ -1,14 +1,38 @@
-// Primitive data types are stored directly in a variable
-// Reference data types (like Strings) store a memory reference to where the data is stored.
+/*
+Primitive data types are stored directly in a variable, by allocating memory and storing both the data and variable name there. 
+Starts lowercase.
+They hold one piece of data at a time.
+
+Class (or reference) data types store a memory reference to where the data is stored. So, where the variable name is stored, is the location for the actual stored data.  
+Starts uppercase.
+Holds many pieces of data at a time.
+
+When assigning Primitive data types, we change the value stored in memory. But when we assign a Class data type, we are changing the reference data of the value stored to memory in the variable.
+So, when we have a String class, it is known as immutable. This is because once we create a String, we can't actually change it becasue the variable only holds a reference to the value we stored. Instead, it can be reassigned to a new memory address. 
+ 
+A Class that holds no data, holds null.
+ */
 public class Variables {
     public static void main(String[] arg) {
         // Hold a sequence of characters. The following is known as a string literal
+        System.out.println("\tThe following is all about strings.\n");
         String greeting = "Hello World";
         System.out.println(greeting);
         // Meanwhile the following is known as a string object
         String goodbye = new String("Goodbye World!");
         System.out.println(goodbye);
+        // Strings can be concatenated, but they are also immutable, meaning their value cannot be changed, the memory address to the desired value can only be changed.
+        String a = "CSA";
+        String b = a; 
+        a = "AP"; // a's memory addressed has changed from the memory address storing "CSA" to a new memory address storing "AP". Something points to something else!
+        System.out.println(a + " " + b);
+        // It is important to understand how Java processes Strings. Whatever you want Java to process first, PUT IN PARENTHESIS!
+        int c = 2;
+        int d = 3;
+        System.out.println("This is a string literal, anyway, 2 + 3 = " + c + d + "???");
+        System.out.println("This is a string literal (again), anyway, 2 + 3 = " + (c + d) + "! The int's are processed first as they are in parenthesis.");
 
+        System.out.println("\n\tThe following is all about primitives.\n");
         /*
         int, double, boolean, char, byte, short, and long are primitve data types .
         The following are also "literals" which can be concatenated with other variables of the same type. Ints' and Doubles can mix as a result.
@@ -47,6 +71,7 @@ public class Variables {
         long longNumber = 9223372036854775807L;
         longNumber++;
         System.out.println(longNumber);
+
 
     }
 }
