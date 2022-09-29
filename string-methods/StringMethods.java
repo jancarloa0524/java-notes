@@ -14,6 +14,7 @@ public class StringMethods {
     // Can take out specific sections of a string
     System.out.println(sentence.substring(15));
     System.out.println(sentence.substring(10, 14));
+    
     String sentence2 = ", specifically Halo";
     // Can combine strings, concatenation
     System.out.println(sentence.concat(sentence2));
