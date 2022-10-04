@@ -11,6 +11,7 @@ public class SavingsAccount {
 You can create a "method", which acts like a function in JS. 
 "public" means that other classes can access this method.
 "void" means that there is no specific output
+"non-void" methods mean that there is an output, usually explicitely stated by the method. 
 "checkBalance()" is the name of the method
 
 When the method is called, all the code within it will run.
@@ -27,7 +28,7 @@ Not considered a non-static method due to it's signature not including the word 
 // methods can take in parameters
 /*
     !!! AP EXAM NOTE !!!
-You can have mutliple methods of the same name that are all usable as long as the parameters are different, similiar to having multiple constructors. 
+You can have mutliple methods of the same name that are all usable as long as the parameters are different, similiar to having multiple "Overloaded" constructors. These are called "Overloaded" methods!
 */
   public void deposit(int amountToDeposit) {
     int totalBalance = balance + amountToDeposit;
@@ -43,6 +44,7 @@ You CAN return an object, although it works a little differently than returning 
 If you return a primitive value, a copy of it is returned.
 Instead of an object, you return a reference to the object (SavingsAccount@2f333739)
 */
+// This is a "non-void" method
   public int withdraw(int amountToWithdraw) {
     int totalBalance = balance - amountToWithdraw;
     balance = totalBalance;
