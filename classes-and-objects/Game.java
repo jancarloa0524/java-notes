@@ -1,8 +1,8 @@
-// Classes define STATE and BEHAVIOUR of their instances. 
-// Objects are instances of classes!
+// Classes define STATE and BEHAVIOUR of their instances. The template for objects. 
+// Objects are instances of classes! They actually use the STATE and BEHAVIOUR of the class. 
 public class Game {
     // The following are called "Instance Variables"
-    String gameTitle;
+    String gameTitle; // Strings are classes. They are the only class that can be declared like a primitive data type (don't have to use "new")
     int listPrice;
     double userRating;
     boolean hasMultiplayer;
@@ -32,9 +32,12 @@ public class Game {
 
     public static void main(String[] args){
         // These are instances of the class "Game". !!! AP EXAM NOTE !!! Within these instances are "actual parameters". Also known as "objects".
+        // Using the "new" keyword means calling constructors. 
         Game halo = new Game("Halo", 20, 9.2);
         Game halfLife = new Game("Half-Life", 10, 9.9);
         Game callOfDuty = new Game("Call of Duty", 60, true);
+        // You can pass in an object into a variable, but you would be passing in a reference to memory. So, once we try and use a method to make a change in "callOfDuty", you would also affect "callOfDuty2". In order to make change seperately, both need to be declared seperately with constructors (new). 
+        Game callOfDuty2 = callOfDuty;
 
         /*
             !!! AP EXAM NOTE !!!
