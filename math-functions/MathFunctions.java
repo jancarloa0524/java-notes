@@ -20,11 +20,12 @@ public class MathFunctions {
         double answer3 = Math.random();
         System.out.println(answer3);
 
-        // This is how you get a random num in a range
+        // This is how you get a random num in a range (in this case, 1-100)
         double ran = Math.random();
-        int range = 100;
         int min = 1;
-        double answer = (int) (ran * range) + min;
+        int max = 100;
+        int range = max - min + 1;
+        double answer = (int)(ran * range) + min;
         System.out.println(answer);
     }
 }
