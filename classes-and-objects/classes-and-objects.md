@@ -6,7 +6,7 @@ This is a fun little activity, I really liked the challenging math component. Pe
 
 ## Notes from ProjectSTEM
 
-### Methods
+### *Methods*
 
 **Public** means that other classes can access the indicated method/class/variable.
 
@@ -65,7 +65,7 @@ You can overload methods as long as the parameters are different, however you ca
 #### **Method Decomposition**
 When we create methods to solve smaller problems of a bigger problem, this is called Method Decomposition. 
 
-### Primitives vs. Class
+### *Primitives vs. Class*
 
 Changes made to primitives ina  void method are not preserved, due to primitives being saved in memory directly. 
 
@@ -104,6 +104,117 @@ public static void main(String[] args)
 // circle with radius 6.0
 ```
 
+### *Classes*
+Classes have two features, **variables** and **methods** (fields and behaviours).
 
+`public static void main(String[] args) {}` is always necessary for a class. 
 
+When we begin writing classes, we need to declare our variables for the project. We need to use the keyword `private` to make sure other classes do not interfere with these variables. These variables basically make up the "characteristics" of a class.
+
+``` java
+public class Car {
+  private String model;
+  private String make;
+  private int year;
+  private int mph;
+}
+```
+
+We can then use these variables to create **constructors**. Constructors are used to create the objects within our programs. They are declared like a method is, but without the return type and the name must be the same as the class. Constructors can also have their own parameters, so they can also be overloaded, and are identified based on the parameters passed in. 
+
+``` java
+public class Car {
+  // private var's here
+  public Car() {
+    // create the car like this!
+  }
+
+  public Car(String carModel, int yearMade) {
+    // create car like that!
+  }
+
+  public Car(String carMake, int yearMade, int mph) {
+    // Or create it like this!
+  }
+}
+```
+
+#### **Validating Data**
+When we are creating our constructors, we also want to make sure the user doesn't send in data that wouldn't give the intended results. For example, what if we don't want the user to enter a year less than 1885?
+
+``` java
+public class Car {
+  public int year;
+
+  public Car(int yearMade) {
+    if (yearMade < 1885) {
+      year = 2000;
+    } else {
+      year = yearMade;
+    }
+  }
+}
+```
+
+This, however, might not always make sure our data remains valid. Notice, we declared `year` as a public instead of private variable. If a user were to enter the following:
+
+``` java
+Car c1 = new Car(2000);
+c1.year = 1885;
+```
+
+They would have been able to force the year the car was made to be 1885, despite our data validation. However, if we had set `year` to private, the user would end up with an error!
+
+`Error: year has private access in Car.`
+
+But, what if we did want to allow users to modify objects?
+
+#### *Accessors and Mutators*
+
+In order to allow users to *see* data, we can create an **accessor** method. 
+
+``` java
+public String getCarModel() {
+  return model;
+}
+```
+
+In order to allow users to *modify* data, we create a *mutator* method.
+
+``` java
+public void setYearMade(int yearMade) {
+  year = yearMade;
+}
+```
+
+### **toString**
+If we try to print an object to the console, more often than not we just end up with a string of numbers and letters, this is the memory address. 
+
+We can adjust this with the *toString* method. 
+
+``` java
+public String toString() {
+  return "A " + model + " " + make + " from " + year + ", with " +  mph + "mph.";
+}
+```
+
+### **"this"**
+
+The "this" keyword is a pretty useful keyword, this is how you use it :> (don't really have a good explanation for it yet): 
+
+``` java
+public class Car {
+  private String model;
+  private String make;
+  private int year;
+  private int mph;
+
+  public Car() {
+    this.model = "unknown";
+    this.make = "unkonwn";
+    this.year = 2000;
+    this.mph = 0;
+  }
+}
+```
 
