@@ -34,7 +34,7 @@ for (int i = 1; i < list.length; i++) {
 Or access an invalid index
 
 ``` java
-for (int i = 0; i < list.length; i++) {
+for (int i = 0; i <= list.length; i++) {
     // code
 }
 ```

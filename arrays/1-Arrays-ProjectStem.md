@@ -1,7 +1,7 @@
 # Arrays
 
 ## Arrays are...
-Objects that are used to hold large sets of data. They can hold both primitives and class types. Howerver, you need to declare the values that they will hold, because they cannot hold different data types in the same array. 
+Objects that are used to hold large sets of data. They can hold both primitives and class types. However, you need to declare the values that they will hold, because they cannot hold different data types in the same array. 
 
 ## To declare an array...
 ```java
