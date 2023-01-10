@@ -29,8 +29,7 @@ There are also algorithms that can be used to modify the ArrayList. When this oc
 
 ``` java
  //Reverse the order of the Strings in the list
-for (int i = 0; i < colors.size(); i++)
-{
+for (int i = 0; i < colors.size(); i++) {
   String col = colors.remove(i);
   colors.add(0, col);
 }
