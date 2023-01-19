@@ -1,5 +1,7 @@
 # Linear search
 
+Algorithm: Finishes in a finite time, and consists of a set of logical ordered steps.
+
 This covers the linear or sequential search algorithm, one of two standard searching algorithms needed for APCSA. 
 
 ## Searching Any Set of Values
